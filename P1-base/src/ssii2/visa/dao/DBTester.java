@@ -17,15 +17,17 @@ public class DBTester {
     // Para conexiones directas, requerimos: driver, cadena de conexión,
     // usuario y clave
     private static final String JDBC_DRIVER =
-           "org.apache.derby.jdbc.ClientDriver";
+           //"org.apache.derby.jdbc.ClientDriver";
+           "org.postgresql.Driver";
 
     // TODO: Definir la cadena de conexion a la base de datos
     /*********************************************************/
     private static final String JDBC_CONNSTRING =
-            "jdbc:derby://10.1.1.1:1527/visa;create=true";
+            //"jdbc:derby://10.1.1.1:1527/visa;create=true";
+            "jdbc:postgresql://10.1.4.1:5432/visa";
     /*********************************************************/
-    private static final String JDBC_USER = "APP";
-    private static final String JDBC_PASSWORD = "APP";
+    private static final String JDBC_USER = "alumnodb";//"APP";
+    private static final String JDBC_PASSWORD = "alumnodb";//"APP";
 
     // Para conexión por datasource, sólo necesitamos su nombre
     // TODO: Definir el nombre del datasource
@@ -44,8 +46,8 @@ public class DBTester {
     private int     dsConnectionCount = 0;
     private int     directConnectionCount = 0;
 
-    
-    
+
+
     public DBTester() {
 
         try {
