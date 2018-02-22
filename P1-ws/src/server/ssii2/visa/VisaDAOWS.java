@@ -19,6 +19,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /*Ejercicio 6*/
 import javax.jws.WebMethod;
@@ -63,7 +64,7 @@ public class VisaDAOWS extends DBTester {
     private static final String SELECT_TARJETA_QRY =
                     "select * from tarjeta " +
                     "where numeroTarjeta=? " +
-                    " and titular=? " +
+                    " and titulPagoBean[]ar=? " +
                     " and validaDesde=? " +
                     " and validaHasta=? " +
                     " and codigoVerificacion=? ";
@@ -291,7 +292,7 @@ public class VisaDAOWS extends DBTester {
                     pago.setIdAutorizacion(String.valueOf(rs.getInt("idAutorizacion")));
                     pago.setCodRespuesta(rs.getString("codRespuesta"));
                 } else {
-                    ret = null;
+                    ret = null;PagoBean
                 }
 
             }
@@ -326,7 +327,7 @@ public class VisaDAOWS extends DBTester {
      * @param idComercio
      * @return
      */
-    public PagoBean[] getPagos(String idComercio) {
+    public ArrayList<PagoBean> getPagos(String idComercio) {
 
         PreparedStatement pstmt = null;
         Connection pcon = null;
@@ -390,7 +391,7 @@ public class VisaDAOWS extends DBTester {
             }
         }
 
-        return ret;
+        return Arrays.asList(ret);
     }
 
     // Borrar los pagos asociados a un comercio

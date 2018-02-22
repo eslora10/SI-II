@@ -1,7 +1,7 @@
 /**
  * Pr&aacute;ctricas de Sistemas Inform&aacute;ticos II
- * 
- * Esta servlet se encarga de visualizar los pagos para un determinado comercio. 
+ *
+ * Esta servlet se encarga de visualizar los pagos para un determinado comercio.
  * Es necesario que en la llamada se incluya un valor correcto del par&aacute;metros:
  * <dl>
  *    <dt>Identificador del comercio</dt>
@@ -17,51 +17,71 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import ssii2.visa.PagoBean;
-import ssii2.visa.dao.VisaDAO;
+//import ssii2.visa.dao.VisaDAO;
+import ssii2.visa.VisaDAOWSService; // Stub generado automáticamente
+import ssii2.visa.VisaDAOWS; // Stub generado automáticamente
+import javax.xml.ws.WebServiceRef;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
  * @author phaya
  */
 public class GetPagos extends ServletRaiz {
-     
-    /** 
+
+    /**
      * Par&aacute;metro que indica el identificador de comercio
      */
     public final static String PARAM_ID_COMERCIO = "idComercio";
 
-    /** 
+    /**
      * Par&aacute;metro que indica la ruta de retorno
      */
     public final static String PARAM_RUTA_RETORNO = "ruta";
 
-    /** 
+    /**
      * Atribute que hace referencia a la lista de pagos
      */
     public final static String ATTR_PAGOS = "pagos";
-    
-    /** 
+
+    /**
     * Procesa una petici&oacute;n HTTP tanto <code>GET</code> como <code>POST</code>.
     * @param request objeto de petici&oacute;n
     * @param response objeto de respuesta
-    */    
+    */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {        
-        
-		VisaDAO dao = new VisaDAO();
-		
-		/* Se recoge de la petici&oacute;n el par&aacute;metro idComercio*/  
+    throws ServletException, IOException {
+
+      VisaDAOWSService service = new VisaDAOWSService();
+      VisaDAOWS dao = service. getVisaDAOWSPort ();
+    try {
+      BindingProvider bp = (BindingProvider) dao;
+      bp.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
+        getServletContext().getInitParameter("url-pattern"));
+    } catch (Exception ee){
+      errorLog(e.toString());
+    }
+
+		/* Se recoge de la petici&oacute;n el par&aacute;metro idComercio*/
 		String idComercio = request.getParameter(PARAM_ID_COMERCIO);
-		
+
 		/* Petici&oacute;n de los pagos para el comercio */
-		PagoBean[] pagos = dao.getPagos(idComercio);        
+    try {
+		    ArrayList<PagoBean> pagos_list = dao.getPagos(idComercio);
+        PagoBean[] pagos = Arrays.toArray(pagos_list);
+
 
         request.setAttribute(ATTR_PAGOS, pagos);
         reenvia("/listapagos.jsp", request, response);
-        return;       
-    }      
-    
-   /** 
+    } catch(Exception e){
+          errorLog(e.toString());
+    }
+    return;
+    }
+
+   /**
     * Procesa una petici&oacute;n HTTP <code>GET</code>.
     * @param request objeto de petici&oacute;n
     * @param response objeto de respuesta
@@ -70,9 +90,9 @@ public class GetPagos extends ServletRaiz {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         processRequest(request, response);
-    } 
+    }
 
-    /** 
+    /**
     * Procesa una petici&oacute;n HTTP <code>POST</code>.
     * @param request objeto de petici&oacute;n
     * @param response objeto de respuesta
@@ -82,8 +102,8 @@ public class GetPagos extends ServletRaiz {
     throws ServletException, IOException {
         processRequest(request, response);
     }
-    
-    /** 
+
+    /**
     * Devuelve una descripici&oacute;n abreviada del servlet
     */
     @Override
