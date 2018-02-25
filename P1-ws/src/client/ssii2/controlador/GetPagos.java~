@@ -60,7 +60,7 @@ public class GetPagos extends ServletRaiz {
     try {
       BindingProvider bp = (BindingProvider) dao;
       bp.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
-        getServletContext().getInitParameter("url-server"));
+        getServletContext().getInitParameter("url-pattern"));
     } catch (Exception ee){
       errorLog(ee.toString());
     }

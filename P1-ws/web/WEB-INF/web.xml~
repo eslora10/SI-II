@@ -78,7 +78,7 @@
     -->
     <filter-mapping>
         <filter-name>CompruebaSesion</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>http://10.1.4.1:8080/P1-ws-ws/VisaDAOWSService</url-pattern>
         <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
 

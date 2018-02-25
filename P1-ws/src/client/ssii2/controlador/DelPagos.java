@@ -21,6 +21,7 @@ import ssii2.visa.PagoBean;
 import ssii2.visa.VisaDAOWSService; // Stub generado automáticamente
 import ssii2.visa.VisaDAOWS; // Stub generado automáticamente
 import javax.xml.ws.WebServiceRef;
+import javax.xml.ws.BindingProvider;
 
 /**
  *
@@ -56,9 +57,9 @@ public class DelPagos extends ServletRaiz {
     try {
       BindingProvider bp = (BindingProvider) dao;
       bp.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
-        getServletContext().getInitParameter("url-pattern"));
+        getServletContext().getInitParameter("url-server"));
     } catch (Exception ee){
-      errorLog(e.toString());
+      errorLog(ee.toString());
     }
 
 		/* Se recoge de la petici&oacute;n el par&aacute;metro idComercio*/
