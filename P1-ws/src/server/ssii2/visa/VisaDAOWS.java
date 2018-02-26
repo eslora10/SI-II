@@ -64,7 +64,7 @@ public class VisaDAOWS extends DBTester {
     private static final String SELECT_TARJETA_QRY =
                     "select * from tarjeta " +
                     "where numeroTarjeta=? " +
-                    " and titulPagoBean[]ar=? " +
+                    " and titular=? " +
                     " and validaDesde=? " +
                     " and validaHasta=? " +
                     " and codigoVerificacion=? ";
@@ -217,7 +217,7 @@ public class VisaDAOWS extends DBTester {
         Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;
-        PagoBean ret = null;
+        boolean ret = false;;
         String codRespuesta = "999"; // En principio, denegado
 
         // TODO: Utilizar en funcion de isPrepared()
@@ -227,8 +227,6 @@ public class VisaDAOWS extends DBTester {
         // Comprobar id.transaccion - si no existe,
         // es que la tarjeta no fue comprobada
         if (pago.getIdTransaccion() == null) {
-		errorLog(pago.getIdTransaccion());
-		/****/ errorLog("aqui1");
             return null;
         }
 
@@ -251,10 +249,10 @@ public class VisaDAOWS extends DBTester {
                pstmt.setDouble(2, pago.getImporte());
                pstmt.setString(3, pago.getIdComercio());
                pstmt.setString(4, pago.getTarjeta().getNumero());
-               ret = null;
+               ret = false;
                if (!pstmt.execute()
                        && pstmt.getUpdateCount() == 1) {
-                 ret = pago;
+                 ret = true;
                }
 
             } else {
@@ -262,15 +260,15 @@ public class VisaDAOWS extends DBTester {
             stmt = con.createStatement();
             String insert = getQryInsertPago(pago);
             errorLog(insert);
-            ret = null;
+            ret = false;
             if (!stmt.execute(insert)
                     && stmt.getUpdateCount() == 1) {
-                ret = pago;
+                ret = true;
 			}
             }/****************/
 
             // Obtener id.autorizacion
-            if (ret != null) {
+            if (ret) {
 
                 /* TODO Permitir usar prepared statement si
                  * isPrepared() = true */
@@ -294,16 +292,14 @@ public class VisaDAOWS extends DBTester {
                     pago.setIdAutorizacion(String.valueOf(rs.getInt("idAutorizacion")));
                     pago.setCodRespuesta(rs.getString("codRespuesta"));
                 } else {
-			errorLog("aqui2");
-                    ret = null;
+                    ret = false;
                 }
 
             }
 
         } catch (Exception e) {
             errorLog(e.toString());
-            ret = null;
-		errorLog("aqui3");
+            ret = false;
         } finally {
             try {
                 if (rs != null) {
@@ -321,8 +317,9 @@ public class VisaDAOWS extends DBTester {
             } catch (SQLException e) {
             }
         }
-	errorLog(ret.toString());
-        return ret;
+        if (!ret)
+            return null;
+        return pago;
     }
 
 
@@ -513,7 +510,7 @@ public class VisaDAOWS extends DBTester {
      * @param directConnection valor de conexión directa o indirecta
      */
     @Override
-    public void setDirectConnection(@WebParam(name = "directConnection") boolean directConnection) {
+    public void setDirectConnection(boolean directConnection) {
         super.setDirectConnection(directConnection);
     }
 

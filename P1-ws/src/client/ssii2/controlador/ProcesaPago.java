@@ -141,6 +141,8 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 
+        VisaDAOWSService service = new VisaDAOWSService();
+
         TarjetaBean tarjeta = creaTarjeta(request);
         ValidadorTarjeta val = new ValidadorTarjeta();
         PagoBean pago = null;
@@ -152,21 +154,20 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
             return;
         }
 
-    VisaDAOWSService service = new VisaDAOWSService();
+
 		VisaDAOWS dao = service. getVisaDAOWSPort ();
     try {
       BindingProvider bp = (BindingProvider) dao;
       bp.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
         getServletContext().getInitParameter("url-server"));
     } catch (Exception ee){
-      errorLog(ee.toString());
+      errorLog("Servidor no encontrado");
 		return;
     }
 
 	HttpSession sesion = request.getSession(false);
 	if (sesion != null) {
 		pago = (PagoBean) sesion.getAttribute(ComienzaPago.ATTR_PAGO);
-		errorLog("ID1:" + pago.getIdTransaccion());
 	}
 	if (pago == null) {
 		pago = creaPago(request);
@@ -176,9 +177,8 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
 		dao.setDirectConnection(isdirectConnection);
 		boolean usePrepared = Boolean.valueOf(request.getParameter("usePrepared"));
 		dao.setPrepared(usePrepared);
-		errorLog("ID:" + pago.getIdTransaccion());
 	}
-		  
+
 
 	  // Almacenamos la tarjeta en el pago
 	  pago.setTarjeta(tarjeta);
@@ -187,7 +187,6 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
 	      enviaError(new Exception("Tarjeta no autorizada:"), request, response);
 	      return;
 	  }
-	errorLog("ID:" + pago.getIdTransaccion());
 
 	pago =  dao.realizaPago(pago);
 	if (pago == null) {
