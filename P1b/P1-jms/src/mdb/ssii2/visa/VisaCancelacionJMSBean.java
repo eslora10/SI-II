@@ -29,12 +29,12 @@ public class VisaCancelacionJMSBean extends DBTester implements MessageListener 
   @Resource
   private MessageDrivenContext mdc;
 
-  private static final String UPDATE_CANCELA_QRY ="UPDATE pago SET codRespuesta='999' "+
+  private static final String UPDATE_CANCELA_QRY ="UPDATE pago SET codRespuesta=999 "+
   "where idAutorizacion=?";
    // TODO : Definir UPDATE sobre la tabla pagos para poner
    // codRespuesta a 999 dado un código de autorización
-   private static final String UPDATE_SALDO_QRY ="UPDATE tarjeta SET saldo =? "+
-   "where numerotarjeta=?";
+   private static final String UPDATE_SALDO_QRY ="UPDATE tarjeta SET saldo = saldo + pago.importe "+
+   "FROM pago WHERE idAutorizacion= ? AND tarjeta.numerotarjeta = pago.numerotarjeta";
 
 
   public VisaCancelacionJMSBean() {
@@ -47,11 +47,29 @@ public class VisaCancelacionJMSBean extends DBTester implements MessageListener 
   // la actualización
   public void onMessage(Message inMessage) {
       TextMessage msg = null;
+      PreparedStatement pstmt = null;
+      Connection con = null;
+      String upd;
 
       try {
+          /*Conexion con la DB*/
+          con = getConnection();
+          upd = UPDATE_CANCELA_QRY;
+          pstmt = con.prepareStatement(upd);
+
+
           if (inMessage instanceof TextMessage) {
               msg = (TextMessage) inMessage;
               logger.info("MESSAGE BEAN: Message received: " + msg.getText());
+              pstmt.setInt(1, Integer.parseInt(msg.getText()));
+              pstmt.execute();
+
+              upd = UPDATE_SALDO_QRY;
+              pstmt = con.prepareStatement(upd);
+              pstmt.setInt(1, Integer.parseInt(msg.getText()));
+              logger.info(pstmt.toString());
+              pstmt.execute();
+
           } else {
               logger.warning(
                       "Message of wrong type: "
@@ -62,7 +80,17 @@ public class VisaCancelacionJMSBean extends DBTester implements MessageListener 
           mdc.setRollbackOnly();
       } catch (Throwable te) {
           te.printStackTrace();
-      }
+      } finally {
+            try {
+                if (pstmt != null) {
+                    pstmt.close(); pstmt = null;
+                }
+                if (con != null) {
+                    closeConnection(con); con = null;
+                }
+            } catch (SQLException e) {
+            }
+        }
   }
 
 

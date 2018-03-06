@@ -68,9 +68,11 @@ public class VisaQueueMessageProducer {
         }
 
         try {
-          // TODO: Inicializar connectionFactory
-          // y queue mediante JNDI
-
+          /*
+          InitialContext jndi = new InitialContext();
+          connectionFactory = (ConnectionFactory)jndi.lookup("jms/VisaConnectionFactory");
+          queue = (Queue)jndi.lookup("jms/VisaPagosQueue");
+          */
           connection = connectionFactory.createConnection();
           session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
           if (args[0].equals("-browse")) {
