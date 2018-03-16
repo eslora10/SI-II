@@ -1,42 +1,330 @@
-2018-03-13 17:22:24,944 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
-2018-03-13 17:22:25,050 INFO o.a.j.JMeter: Loading user properties from: /home/alumnos/e321098/Desktop/apache-jmeter-4.0/bin/user.properties
-2018-03-13 17:22:25,050 INFO o.a.j.JMeter: Loading system properties from: /home/alumnos/e321098/Desktop/apache-jmeter-4.0/bin/system.properties
-2018-03-13 17:22:25,054 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
-2018-03-13 17:22:25,054 INFO o.a.j.JMeter: Version 4.0 r1823414
-2018-03-13 17:22:25,055 INFO o.a.j.JMeter: java.version=1.8.0_131
-2018-03-13 17:22:25,055 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2018-03-13 17:22:25,055 INFO o.a.j.JMeter: os.name=Linux
-2018-03-13 17:22:25,055 INFO o.a.j.JMeter: os.arch=amd64
-2018-03-13 17:22:25,055 INFO o.a.j.JMeter: os.version=3.13.0-24-generic
-2018-03-13 17:22:25,055 INFO o.a.j.JMeter: file.encoding=ANSI_X3.4-1968
-2018-03-13 17:22:25,055 INFO o.a.j.JMeter: Max memory     =1726480384
-2018-03-13 17:22:25,055 INFO o.a.j.JMeter: Available Processors =4
-2018-03-13 17:22:25,088 INFO o.a.j.JMeter: Default Locale=English (United States)
-2018-03-13 17:22:25,088 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
-2018-03-13 17:22:25,088 INFO o.a.j.JMeter: JMeterHome=/home/alumnos/e321098/Desktop/apache-jmeter-4.0
-2018-03-13 17:22:25,088 INFO o.a.j.JMeter: user.dir  =/home/alumnos/e321098/Desktop
-2018-03-13 17:22:25,088 INFO o.a.j.JMeter: PWD       =/home/alumnos/e321098/Desktop
-2018-03-13 17:22:25,089 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: localhost FullName: localhost
-2018-03-13 17:22:25,884 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
-2018-03-13 17:22:26,068 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
-2018-03-13 17:22:26,068 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
-2018-03-13 17:22:26,260 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2018-03-13 17:22:26,689 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2018-03-13 17:22:26,689 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2018-03-13 17:22:30,868 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2018-03-13 17:22:30,869 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2018-03-13 17:22:30,869 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2018-03-13 17:22:30,869 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2018-03-13 17:22:30,869 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2018-03-13 17:22:30,869 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2018-03-13 17:22:31,291 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2018-03-13 17:22:31,292 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /home/alumnos/e321098/Desktop/apache-jmeter-4.0/bin/proxyserver.jks
-2018-03-13 17:22:31,404 INFO o.a.j.s.FileServer: Default base='/home/alumnos/e321098/Desktop'
-2018-03-13 17:22:31,666 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2018-03-13 17:22:31,666 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2018-03-13 17:22:31,666 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2018-03-13 17:22:31,666 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2018-03-13 17:25:15,303 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e321098/Desktop'
-2018-03-13 17:25:15,445 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2018-03-13 17:25:15,464 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2018-03-13 17:25:15,465 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2018-03-16 18:59:12,637 INFO o.a.j.u.JMeterUtils: Setting Locale to es_ES
+2018-03-16 18:59:12,650 INFO o.a.j.u.JMeterUtils: Could not find resources for 'es_ES', using 'es'
+2018-03-16 18:59:12,651 INFO o.a.j.JMeter: Loading user properties from: /home/alumnos/e321098/Desktop/apache-jmeter-4.0/bin/user.properties
+2018-03-16 18:59:12,651 INFO o.a.j.JMeter: Loading system properties from: /home/alumnos/e321098/Desktop/apache-jmeter-4.0/bin/system.properties
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: Version 4.0 r1823414
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: java.version=1.8.0_131
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: os.name=Linux
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: os.arch=amd64
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: os.version=3.13.0-24-generic
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: file.encoding=UTF-8
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: Max memory     =1832910848
+2018-03-16 18:59:12,656 INFO o.a.j.JMeter: Available Processors =4
+2018-03-16 18:59:12,663 INFO o.a.j.JMeter: Default Locale=español (España)
+2018-03-16 18:59:12,663 INFO o.a.j.JMeter: JMeter  Locale=español (España)
+2018-03-16 18:59:12,663 INFO o.a.j.JMeter: JMeterHome=/home/alumnos/e321098/Desktop/apache-jmeter-4.0
+2018-03-16 18:59:12,663 INFO o.a.j.JMeter: user.dir  =/home/alumnos/e321098/SI-II/P2
+2018-03-16 18:59:12,663 INFO o.a.j.JMeter: PWD       =/home/alumnos/e321098/SI-II/P2
+2018-03-16 18:59:12,664 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: localhost FullName: localhost
+2018-03-16 18:59:12,805 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2018-03-16 18:59:12,852 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2018-03-16 18:59:12,852 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2018-03-16 18:59:12,906 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2018-03-16 18:59:13,322 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-03-16 18:59:13,322 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-03-16 18:59:14,898 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-03-16 18:59:14,899 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-03-16 18:59:14,899 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-03-16 18:59:14,899 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-03-16 18:59:14,899 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-03-16 18:59:14,899 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-03-16 18:59:15,244 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2018-03-16 18:59:15,245 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /home/alumnos/e321098/Desktop/apache-jmeter-4.0/bin/proxyserver.jks
+2018-03-16 18:59:15,392 INFO o.a.j.s.FileServer: Default base='/home/alumnos/e321098/SI-II/P2'
+2018-03-16 18:59:15,722 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-03-16 18:59:15,722 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2018-03-16 18:59:15,722 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-03-16 18:59:15,722 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-03-16 18:59:29,339 INFO o.a.j.g.a.Load: Loading file: /home/alumnos/e321098/SI-II/P2/P2.jmx
+2018-03-16 18:59:29,339 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e321098/SI-II/P2'
+2018-03-16 18:59:29,446 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-03-16 18:59:29,456 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-03-16 18:59:29,458 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2018-03-16 18:59:29,461 INFO o.a.j.s.SaveService: Loading file: /home/alumnos/e321098/SI-II/P2/P2.jmx
+2018-03-16 18:59:29,638 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e321098/SI-II/P2'
+2018-03-16 19:01:40,836 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:01:40,837 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:01:40,837 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:01:40,853 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:01:41,013 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:01:41,013 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:01:41,013 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:01:41,014 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:01:41,019 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:01:41,019 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2018-03-16 19:01:41,023 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:01:41,028 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:01:41,034 INFO o.a.j.p.h.s.HTTPJavaImpl: Maximum connection retries = 0
+2018-03-16 19:01:46,760 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:01:46,760 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:01:46,761 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2018-03-16 19:01:46,761 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2018-03-16 19:01:46,761 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:01:46,761 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:01:46,762 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-03-16 19:01:46,762 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2018-03-16 19:01:46,762 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2018-03-16 19:02:51,764 INFO o.a.j.t.JMeterThread: Thread is done: P1-ws 2-1
+2018-03-16 19:02:51,764 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2018-03-16 19:02:51,764 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : P1-ejb
+2018-03-16 19:02:51,764 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ejb.
+2018-03-16 19:02:51,764 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:02:51,764 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:02:51,765 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2018-03-16 19:02:51,765 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-03-16 19:02:51,766 INFO o.a.j.t.JMeterThread: Thread started: P1-ejb 3-1
+2018-03-16 19:03:25,857 INFO o.a.j.t.JMeterThread: Thread is done: P1-ejb 3-1
+2018-03-16 19:03:25,857 INFO o.a.j.t.JMeterThread: Thread finished: P1-ejb 3-1
+2018-03-16 19:03:25,858 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:03:25,858 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:03:25,859 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-03-16 19:04:34,137 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:04:34,139 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:04:34,146 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:04:34,332 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:04:34,332 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:04:34,333 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:04:34,333 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:04:34,334 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:04:34,334 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2018-03-16 19:04:34,337 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:04:34,338 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:04:39,164 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:04:39,164 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:04:39,164 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2018-03-16 19:04:39,164 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2018-03-16 19:04:39,164 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:04:39,164 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:04:39,165 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-03-16 19:04:39,165 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2018-03-16 19:04:39,165 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2018-03-16 19:05:44,768 INFO o.a.j.t.JMeterThread: Thread is done: P1-ws 2-1
+2018-03-16 19:05:44,768 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2018-03-16 19:05:44,768 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : P1-ejb
+2018-03-16 19:05:44,768 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ejb.
+2018-03-16 19:05:44,768 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:05:44,768 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:05:44,770 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2018-03-16 19:05:44,770 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-03-16 19:05:44,771 INFO o.a.j.t.JMeterThread: Thread started: P1-ejb 3-1
+2018-03-16 19:06:16,888 INFO o.a.j.t.JMeterThread: Thread is done: P1-ejb 3-1
+2018-03-16 19:06:16,888 INFO o.a.j.t.JMeterThread: Thread finished: P1-ejb 3-1
+2018-03-16 19:06:16,888 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:06:16,888 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:06:16,889 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-03-16 19:11:06,039 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:11:06,039 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:11:06,041 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:11:06,143 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:11:06,143 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:11:06,143 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:11:06,143 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:11:06,143 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:11:06,143 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2018-03-16 19:11:06,143 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:11:06,144 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:11:10,937 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:11:10,937 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:11:10,937 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2018-03-16 19:11:10,939 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2018-03-16 19:11:10,939 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:11:10,940 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:11:10,941 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-03-16 19:11:10,941 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2018-03-16 19:11:10,942 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2018-03-16 19:12:09,714 INFO o.a.j.t.JMeterThread: Thread is done: P1-ws 2-1
+2018-03-16 19:12:09,714 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2018-03-16 19:12:09,714 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : P1-ejb
+2018-03-16 19:12:09,714 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ejb.
+2018-03-16 19:12:09,715 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:12:09,715 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:12:09,715 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2018-03-16 19:12:09,715 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-03-16 19:12:09,715 INFO o.a.j.t.JMeterThread: Thread started: P1-ejb 3-1
+2018-03-16 19:12:35,344 INFO o.a.j.t.JMeterThread: Thread is done: P1-ejb 3-1
+2018-03-16 19:12:35,344 INFO o.a.j.t.JMeterThread: Thread finished: P1-ejb 3-1
+2018-03-16 19:12:35,344 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:12:35,344 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:12:35,345 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-03-16 19:15:38,012 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:15:38,012 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:15:38,014 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:15:38,075 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:15:38,075 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:15:38,075 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:15:38,076 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:15:38,076 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:15:38,076 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2018-03-16 19:15:38,076 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:15:38,077 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:15:43,836 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:15:43,836 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:15:43,837 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2018-03-16 19:15:43,837 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2018-03-16 19:15:43,837 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:15:43,838 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:15:43,838 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-03-16 19:15:43,839 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2018-03-16 19:15:43,839 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2018-03-16 19:16:48,851 INFO o.a.j.t.JMeterThread: Thread is done: P1-ws 2-1
+2018-03-16 19:16:48,851 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2018-03-16 19:16:48,851 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : P1-ejb
+2018-03-16 19:16:48,851 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ejb.
+2018-03-16 19:16:48,851 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:16:48,852 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:16:48,852 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2018-03-16 19:16:48,852 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-03-16 19:16:48,852 INFO o.a.j.t.JMeterThread: Thread started: P1-ejb 3-1
+2018-03-16 19:17:21,699 INFO o.a.j.t.JMeterThread: Thread is done: P1-ejb 3-1
+2018-03-16 19:17:21,699 INFO o.a.j.t.JMeterThread: Thread finished: P1-ejb 3-1
+2018-03-16 19:17:21,699 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:17:21,699 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:17:21,701 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-03-16 19:18:24,953 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:18:24,953 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:18:24,954 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:18:25,011 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:18:25,011 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:18:25,011 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:18:25,011 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:18:25,012 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:18:25,012 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2018-03-16 19:18:25,012 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:18:25,012 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:18:29,747 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:18:29,748 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:18:29,748 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2018-03-16 19:18:29,748 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2018-03-16 19:18:29,748 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:18:29,748 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:18:29,749 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-03-16 19:18:29,749 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2018-03-16 19:18:29,749 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2018-03-16 19:19:19,968 INFO o.a.j.g.a.Start: Stopping test
+2018-03-16 19:19:19,974 INFO o.a.j.t.JMeterThread: Stopping: P1-ws 2-1
+2018-03-16 19:19:19,975 WARN o.a.j.t.JMeterThread: Interrupting: P1-ws 2-1 sampler: P1-ws
+2018-03-16 19:19:19,978 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2018-03-16 19:19:19,978 INFO o.a.j.e.StandardJMeterEngine: Test stopped - no more thread groups will be started
+2018-03-16 19:19:19,978 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:19:19,979 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:19:19,979 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-03-16 19:20:19,243 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:20:19,244 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:20:19,245 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:20:19,384 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:20:19,385 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:20:19,385 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:20:19,385 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:20:19,385 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:20:19,385 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2018-03-16 19:20:19,385 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:20:19,386 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:20:24,856 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:20:24,856 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:20:24,856 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2018-03-16 19:20:24,856 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2018-03-16 19:20:24,857 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:20:24,857 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:20:24,858 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-03-16 19:20:24,858 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2018-03-16 19:20:24,867 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2018-03-16 19:21:28,817 INFO o.a.j.t.JMeterThread: Thread is done: P1-ws 2-1
+2018-03-16 19:21:28,817 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2018-03-16 19:21:28,818 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : P1-ejb
+2018-03-16 19:21:28,818 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ejb.
+2018-03-16 19:21:28,818 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:21:28,818 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:21:28,818 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2018-03-16 19:21:28,818 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-03-16 19:21:28,819 INFO o.a.j.t.JMeterThread: Thread started: P1-ejb 3-1
+2018-03-16 19:22:01,648 INFO o.a.j.t.JMeterThread: Thread is done: P1-ejb 3-1
+2018-03-16 19:22:01,648 INFO o.a.j.t.JMeterThread: Thread finished: P1-ejb 3-1
+2018-03-16 19:22:01,648 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:22:01,648 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:22:01,649 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-03-16 19:32:13,621 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:32:13,621 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:32:13,622 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:32:13,782 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:32:13,782 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:32:13,782 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:32:13,782 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:32:13,783 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:32:13,783 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2018-03-16 19:32:13,788 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:32:13,789 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:32:18,912 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:32:18,912 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:32:18,913 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2018-03-16 19:32:18,913 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2018-03-16 19:32:18,913 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:32:18,913 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:32:18,914 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-03-16 19:32:18,914 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2018-03-16 19:32:18,915 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2018-03-16 19:33:23,240 INFO o.a.j.t.JMeterThread: Thread is done: P1-ws 2-1
+2018-03-16 19:33:23,240 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2018-03-16 19:33:23,241 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : P1-ejb
+2018-03-16 19:33:23,241 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ejb.
+2018-03-16 19:33:23,241 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:33:23,241 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:33:23,241 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2018-03-16 19:33:23,241 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-03-16 19:33:23,242 INFO o.a.j.t.JMeterThread: Thread started: P1-ejb 3-1
+2018-03-16 19:33:55,228 INFO o.a.j.t.JMeterThread: Thread is done: P1-ejb 3-1
+2018-03-16 19:33:55,228 INFO o.a.j.t.JMeterThread: Thread finished: P1-ejb 3-1
+2018-03-16 19:33:55,228 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:33:55,228 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:33:55,229 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-03-16 19:35:51,823 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:35:51,823 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:35:51,824 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:35:51,988 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:35:51,988 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:35:51,988 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:35:51,988 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:35:51,988 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:35:51,988 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-03-16 19:35:51,989 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:35:51,989 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:35:57,346 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:35:57,347 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:35:57,347 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:35:57,347 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:35:57,348 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-03-16 19:55:54,371 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-03-16 19:55:54,372 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-03-16 19:55:54,374 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-03-16 19:55:54,556 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2018-03-16 19:55:54,556 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2018-03-16 19:55:54,556 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:55:54,557 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:55:54,557 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-03-16 19:55:54,557 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2018-03-16 19:55:54,559 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2018-03-16 19:55:54,560 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2018-03-16 19:56:09,984 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2018-03-16 19:56:09,984 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2018-03-16 19:56:09,984 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2018-03-16 19:56:09,985 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2018-03-16 19:56:09,985 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:56:09,985 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:56:09,987 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-03-16 19:56:09,987 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2018-03-16 19:56:09,990 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2018-03-16 19:57:14,780 INFO o.a.j.t.JMeterThread: Thread is done: P1-ws 2-1
+2018-03-16 19:57:14,780 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2018-03-16 19:57:14,780 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : P1-ejb
+2018-03-16 19:57:14,780 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ejb.
+2018-03-16 19:57:14,780 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-03-16 19:57:14,780 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=5 perThread=5000.0 delayedStart=false
+2018-03-16 19:57:14,780 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2018-03-16 19:57:14,781 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-03-16 19:57:14,781 INFO o.a.j.t.JMeterThread: Thread started: P1-ejb 3-1
+2018-03-16 19:57:46,382 INFO o.a.j.t.JMeterThread: Thread is done: P1-ejb 3-1
+2018-03-16 19:57:46,382 INFO o.a.j.t.JMeterThread: Thread finished: P1-ejb 3-1
+2018-03-16 19:57:46,382 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-03-16 19:57:46,382 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2018-03-16 19:57:46,383 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

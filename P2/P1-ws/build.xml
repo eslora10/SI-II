@@ -194,7 +194,10 @@ ant limpiar-todo
                    <arg line=" ${nombre}-ws "/>
                </exec>
 	</target>
-	
+	<target name="replegar">
+		<antcall target="replegar-servicio" />
+		<antcall target="replegar-cliente" />
+	</target>		
 	<target name="redesplegar" description="Repliega y vuelve a desplegar" >
 		<antcall target="replegar-servicio" />
 		<antcall target="desplegar-servicio" />

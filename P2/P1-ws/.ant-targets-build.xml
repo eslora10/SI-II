@@ -37,6 +37,7 @@ preparar-meta-inf-servicio
 preparar-web-inf-cliente
 redesplegar
 regenerar-bd
+replegar
 replegar-cliente
 replegar-servicio
 servicio
