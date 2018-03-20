@@ -176,18 +176,18 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
 	      enviaError(new Exception("Tarjeta no autorizada:"), request, response);
 	      return;
 	  }
-	try{
+	//try{
 			pago =  dao.realizaPago(pago);
 			if (pago == null) {
 			      enviaError(new Exception("Pago incorrecto"), request, response);
 						if (sesion != null) sesion.invalidate();
 			      return;
 			  }
-	} catch EJBException e{
-			enviaError(e, request, response);
-			if (sesion != null) sesion.invalidate();
-		  return;
-	}
+	//} catch EJBException e{
+	//		enviaError(e, request, response);
+	//		if (sesion != null) sesion.invalidate();
+	//	  return;
+	//}
 
 	  request.setAttribute(ComienzaPago.ATTR_PAGO, pago);
 	  if (sesion != null) sesion.invalidate();
