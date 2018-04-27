@@ -175,12 +175,13 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
             return;
         }
 
-	if (dao.realizaPago(pago) == null) {
-            enviaError(new Exception("Pago incorrecto"), request, response);
-            return;
-        }
+	pago =  dao.realizaPago(pago);
+	if (pago == null) {
+	      enviaError(new Exception("Pago incorrecto"), request, response);
+	      return;
+	  }
 
-        request.setAttribute(ComienzaPago.ATTR_PAGO, pago);
+	request.setAttribute(ComienzaPago.ATTR_PAGO, pago);
         if (sesion != null) sesion.invalidate();
         reenvia("/pagoexito.jsp", request, response);
         return;
